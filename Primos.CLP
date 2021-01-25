@@ -118,20 +118,20 @@
 
 
 (defrule primo
-	(number(number  ?n2))
+	(number(number  ?n1))
 
 	=>
 	(if (and
-			(< ?n2 17)
-			(= ?*primos* 1))
+			(< ?n1 17)
+			(= ?*primos* 0))
 		then
 			(if (or 
-				(= ?n2 1)
-				(= ?n2 3)
-				(= ?n2 5)
-				(= ?n2 7)
-				(= ?n2 11)
-				(= ?n2 13))
+				(= ?n1 1)
+				(= ?n1 3)
+				(= ?n1 5)
+				(= ?n1 7)
+				(= ?n1 11)
+				(= ?n1 13))
 				then
 					(printout t "Es primo" crlf)
 				else
@@ -141,5 +141,5 @@
 				then
 					(printout t "No es primo" crlf)
 				else
-					(printout t "No hay info" crlf))))
+					(printout t "No hay suficiente información para saber si es primo" crlf))))
 
